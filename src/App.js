@@ -1,32 +1,27 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import React, {Component} from 'react';
+import Home from './pages/Home';
 import Crew from './pages/Crew';
 import Destination from './pages/Destination';
 import Technology from './pages/Technology';
-import Header from './components/Header';
-
-function App() {
-  return (
-    <Router>
-      <Header />
-      <div className="App">
-      <Routes>
-            <Route path='/' element={
-              <>
-                <h1>Home</h1>
-              </>
-            }>
-            </Route>
-
+import Navbar from './components/Navbar';
+import NotFound from './pages/NotFound';
+class App extends Component {
+  render (){
+    return (
+      <Router>
+        <Navbar />
+          <Routes>
+            <Route path="/" element =<Navigate to="/home" /> />
+            <Route path='/home' element={<Home />} />
             <Route path='/crew' element={<Crew />} />
             <Route path='/destination' element={<Destination />} />
             <Route path='/technology' element={<Technology />} />
-
+            <Route path='*' element={< NotFound />}/>
           </Routes>
-
-      </div>
-    </Router>
-  );
+      </Router>
+    );  
+  }
 }
 
 export default App;

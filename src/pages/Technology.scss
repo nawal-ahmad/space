@@ -1,0 +1,196 @@
+.technology {
+    background: url(../../public/assets/technology/background-technology-desktop.jpg);
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 176px 0 0 0;
+
+    .subheading-3 {
+        margin-left: 165px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #ffffff;
+
+        span {
+            margin-right: 24px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    .technology-container {
+        padding: 0 0 0 165px;
+        display: flex;
+        gap: 80px;
+        align-items: center;
+
+        .technology-slide {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            span {
+                position: relative;
+                width: 80px;
+                aspect-ratio: 1/1;
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                transition: .4s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Bellefair", serif;
+                font-size: 32px;
+                color: #ffffff;
+
+                &.active {
+                    background: #fff;
+                    color: black;
+                }
+            }
+
+        }
+
+        .technology-content {
+            .top-text {
+                font-family: "Barlow Condensed", sans-serif;
+                font-size: 16px;
+                letter-spacing: 2.7px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: #ffffff;
+            }
+
+            .heading-3 {
+                font-family: "Bellefair", serif;
+                font-size: 56px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: #ffffff;
+                margin-top: 10px;
+            }
+
+            .description {
+                font-family: "Barlow", sans-serif;
+                font-size: 18px;
+                line-height: 32px;
+                color: #d2d8f9;
+                max-width: 444px;
+                margin-top: 12px;
+
+            }
+        }
+
+        .image-box {
+            margin-left: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 136px 0 0 0;
+
+        .subheading-3 {
+            margin: 0 0 60px 38px;
+            font-size: 24px;
+
+            span {
+                margin-right: 16px;
+            }
+        }
+
+        .technology-container {
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            text-align: center;
+
+            .technology-slide {
+                flex-direction: row;
+                gap: 32px;
+
+                span {
+                    width: 60px;
+                    font-size: 24px;
+                }
+            }
+
+            .technology-content {
+                color: #fff;
+
+                .top-text {
+                    font-size: 14px;
+                }
+
+                .heading-3 {
+                    font-size: 40px;
+                    margin-top: 16px;
+                }
+
+                .description {
+                    font-size: 16px;
+                    line-height: 28px;
+                    margin: 16px auto 0;
+                }
+            }
+
+            .image-box {
+                order: -5;
+
+                .technology-image {
+                    min-height: 310px
+                }
+            }
+        }
+    }
+
+    @media (max-width: 426px) {
+        .subheading-3 {
+            margin: 0 auto 25px;
+            text-align: center;
+
+            span {
+                margin-right: 16px;
+            }
+        }
+
+        .technology-container {
+            gap: 32px;
+
+            .technology-slide {
+                flex-direction: row;
+                gap: 16px;
+
+                span {
+                    width: 40px;
+                    font-size: 24px;
+                }
+            }
+
+            .technology-content {
+                .heading-3 {
+                    font-size: 24px;
+                    margin-top: 16px;
+                }
+
+                .description {
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+            }
+
+            .image-box {
+                .technology-image {
+                    width: 100%;
+                    min-height: 170px
+                }
+            }
+        }
+    }
+}

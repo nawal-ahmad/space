@@ -1,0 +1,213 @@
+.crew {
+    background: url(../../public/assets/crew/background-crew-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 212px 0 0 165px;
+    width: 100%;
+
+    .text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0 120px 0;
+
+        .subheading-3 {
+            color: #ffffff;
+            font-family: "Barlow Condensed", sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            span {
+                color: rgba(255, 255, 255, 0.5);
+                margin-right: 24px;
+            }
+        }
+
+        .crew-content {
+            margin: 155px 0 0 0;
+
+            .heading-4 {
+                color: #ffffff;
+                color: rgba(255, 255, 255, 0.5);
+                font-family: "Bellefair", serif;
+                font-size: 32px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            .heading-3 {
+                color: #ffffff;
+                font-family: "Bellefair", serif;
+                font-size: 56px;
+                font-weight: 400;
+                margin-top: 15px;
+                text-transform: uppercase;
+            }
+
+            .description {
+                color: #d2d8f9;
+                font-family: "Barlow", sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 32px;
+                margin-top: 27px;
+                max-width: 445px;
+            }
+        }
+
+        .crew-slides {
+            align-items: center;
+            display: flex;
+            gap: 24px;
+            grid-gap: 24px;
+            margin-top: 120px;
+
+            span {
+                background: rgba(255, 255, 255, .2);
+                border-radius: 50%;
+                padding: 7.5px;
+                transition: .4s;
+
+                &.active {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .image-box {
+        .crew-image {
+            height: 712px;
+            margin: 0 auto;
+            width: 568px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        align-items: center;
+        background: url(../../public/assets/crew/background-crew-tablet.jpg);
+        flex-direction: column;
+        padding: 136px 0 0 0;
+
+        .text-box {
+            justify-content: center;
+            padding: 0;
+
+            .subheading-3 {
+                font-size: 24px;
+                padding: 0 0 0 38px;
+                text-align: left;
+                width: 100vw;
+
+                span {
+                    margin-right: 16px;
+                }
+            }
+
+            .crew-content {
+                margin: 60px 0 0 0;
+                text-align: center;
+
+                .heading-4 {
+                    font-size: 24px;
+                    text-align: center;
+                }
+
+                .heading-3 {
+                    margin-top: 8px;
+                    font-size: 40px;
+                }
+
+                .description {
+                    font-size: 16px;
+                    line-height: 28px;
+                    margin: 16px auto 0;
+                    max-width: 458px;
+                }
+            }
+
+            .crew-slides {
+                justify-content: center;
+                margin: 40px 0 0 0;
+            }
+        }
+
+        .image-box {
+            .crew-image {
+                height: 572px;
+                margin-top: 40px;
+                width: 456px;
+            }
+        }
+    }
+
+    @media (max-width: 426px) {
+        background: url(../../public/assets/crew/background-crew-mobile.jpg);
+        background-size: cover;
+        flex-direction: column-reverse;
+        justify-content: start;
+        padding: 0 0 0 0;
+
+        .text-box {
+            gap: 30px;
+            margin-top: 35px;
+
+            .subheading-3 {
+                font-size: 24px;
+                padding: 0;
+                position: absolute;
+                top: 80px;
+
+                span {
+                    margin-right: 16px;
+                }
+            }
+
+            .crew-content {
+                margin: 0;
+
+                .heading-4 {
+                    font-size: 16px;
+                }
+
+                .heading-3 {
+                    font-size: 24px;
+                    margin-top: 8px;
+                }
+
+                .description {
+                    font-size: 15px;
+                    line-height: 25px;
+                    margin-top: 16px;
+                    max-width: 327px;
+                }
+            }
+
+            .crew-slides {
+                margin: 0;
+                order: -5;
+            }
+        }
+
+        .image-box {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            height: 222px;
+            margin-top: 140px;
+            padding: 0 0 1px 0;
+            text-align: center;
+            width: 327px;
+
+            .crew-image {
+                height: 222px;
+                margin: 0 auto;
+                position: relative;
+                transform: translate(0, 0);
+                width: 177px;
+            }
+        }
+    }
+}
