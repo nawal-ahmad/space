@@ -19,10 +19,6 @@ export default class Technology extends Component {
         window.addEventListener('resize', this.updateDimensions);
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateDimensions);
-    }
-
     handleClick = (technology) => {
         this.setState({
             technology: technology,
@@ -40,7 +36,7 @@ export default class Technology extends Component {
                 <div className="technology-container">
                     <div className="technology-slide" >
                         {data.technology.map((technology, index) => {
-                            return <span onClick={() => this.handleClick(technology)} className={technology === this.state.technology ? 'active' : ''}>{index + 1}</span>;
+                            return <span key={index} onClick={() => this.handleClick(technology)} className={technology === this.state.technology ? 'active' : ''}>{++index}</span>;
                         })}
                     </div>
                     <div className="technology-content">
@@ -49,7 +45,7 @@ export default class Technology extends Component {
                         <p className="description">{this.state.technology.description}</p>
                     </div>
                     <div className="image-box">
-                        <img className='technology-image' src={this.state.width > 768 ? this.state.technology.images.portrait : this.state.technology.images.landscape} alt="planet" />
+                        <img className='technology-image' src={this.state.width > 768 ? this.state.technology.images.portrait : this.state.technology.images.landscape} alt={this.state.technology.name} />
                     </div>
                 </div>
             </div>

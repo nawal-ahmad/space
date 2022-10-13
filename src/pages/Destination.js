@@ -21,12 +21,12 @@ export default class Destination extends Component {
             <div className='destination'>
                 <div className='image-box'>
                     <h1 className='subheading-3'><span>01</span>Pick your destination</h1>
-                    <img className='destination-image' src={this.state.destination.images.png} alt="planet" />
+                    <img className='destination-image' src={this.state.destination.images.png} alt={this.state.destination.name} />
                 </div>
                 <div className='text-box'>
                     <nav className='destination-nav'>
-                        {data.destinations.map((destination) => {
-                            return <span onClick={() => this.handleClick(destination)} className={destination === this.state.destination ? 'active' : ''}>{destination.name}</span>;
+                        {data.destinations.map((destination, index) => {
+                            return <span key={index} onClick={() => this.handleClick(destination)} className={destination === this.state.destination ? 'active' : ''}>{destination.name}</span>;
                         })}
                     </nav>
                     <h1 className='destination-title'>{this.state.destination.name}</h1>

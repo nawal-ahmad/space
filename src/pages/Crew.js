@@ -12,7 +12,6 @@ export default class Crew extends Component {
         this.setState({
             crew: crew,
         });
-        console.log(crew);
     };
 
     render() {
@@ -29,13 +28,13 @@ export default class Crew extends Component {
                         <p className="description">{this.state.crew.bio}</p>
                     </div>
                     <div className="crew-slides">
-                        {data.crew.map((crew) => {
-                            return <span onClick={() => this.handleClick(crew)} className={crew === this.state.crew ? 'active' : ''}></span>;
+                        {data.crew.map((crew, index) => {
+                            return <span key={index} onClick={() => this.handleClick(crew)} className={crew === this.state.crew ? 'active' : ''}></span>;
                         })}
                     </div>
                 </div>
                 <div className="image-box">
-                    <img className='crew-image' src={this.state.crew.images.png} alt="planet" />
+                    <img className='crew-image' src={this.state.crew.images.png} alt={this.state.crew.name} />
                 </div>
             </div>
         );

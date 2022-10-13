@@ -12,10 +12,10 @@ class App extends Component {
       <Router>
         <Navbar />
           <Routes>
-            <Route path="/" element =<Navigate to="/home" /> />
+            <Route path='/' element =<Navigate to="/home" /> />
             <Route path='/home' element={<Home />} />
             <Route path='/crew' element={<Crew />} />
-            <Route path='/destination' element={<Destination />} />
+            <Route path='/destinations' element={<Destination />} />
             <Route path='/technology' element={<Technology />} />
             <Route path='*' element={< NotFound />}/>
           </Routes>
