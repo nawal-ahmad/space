@@ -20,7 +20,10 @@ export default class Destination extends Component {
         return (
             <div className='destination'>
                 <div className='image-box'>
-                    <h1 className='subheading-3'><span>01</span>Pick your destination</h1>
+                    <h1 className='subheading-3'>
+                        <span>01</span>
+                        Pick your destination
+                    </h1>
                     <img className='destination-image' src={this.state.destination.images.png} alt={this.state.destination.name} />
                 </div>
                 <div className='text-box'>

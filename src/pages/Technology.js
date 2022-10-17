@@ -31,7 +31,7 @@ export default class Technology extends Component {
             <div className='technology'>
                 <h1 className="subheading-3">
                     <span>03</span>
-                    SPACE LAUNCH 101
+                    Space Launch 101
                 </h1>
                 <div className="technology-container">
                     <div className="technology-slide" >
