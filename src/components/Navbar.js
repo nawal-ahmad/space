@@ -20,7 +20,7 @@ export default class Navbar extends Component {
                     <Link className='logo' to='#'>
                         <img src={Logo} alt='logo' />
                     </Link>
-                    <ul className={"nav-links " + (this.state.toggleMenu ? 'mobile-links' : 'hide-links')}> 
+                    <ul className={"nav-links " + (!this.state.toggleMenu && 'hide-links' )}> 
                     {Object.keys(data).map((key, index) => {
                         return (
                             <NavLink to={`/${key}`} className='link' >

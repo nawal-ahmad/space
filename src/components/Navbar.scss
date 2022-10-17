@@ -111,7 +111,7 @@
             }
         }
 
-        .mobile-links {
+        .nav-links {
             align-items: flex-start;
             display: flex;
             flex-direction: column;
@@ -125,7 +125,8 @@
             top: 0;
             transition: 1.4s;
             width: 250px;
-
+            z-index: 1;
+            
             .link {
                 &.active {
                     position: relative;
@@ -141,6 +142,12 @@
                 .nav-count {
                     display: contents;
                 }
+
+                &:not(.active) {
+                    &::after {
+                        content: none;
+                    }
+                }
             }
         }
 
@@ -155,6 +162,7 @@
             margin-left: auto;
             position: relative;
             width: 24px;
+            z-index: 2;
         }
     }
 }
